@@ -2,20 +2,20 @@ class Stella{
   
   private float x;
   private float y;
-  private float h;
-  private float w;
+  private float l;
+  private float r;
   
   
   
   public static final color COLORE_STELLA  = #FFFF00;
   public static final color COLORE_SCIA  = #FFDD00;
   
-  Stella(float x,float y,float w,float h){
+  Stella(float x,float y,float r,float l){
     
     this.x= x;
     this.y= y;
-    this.w=w;
-    this.h=h;
+    this.r=r;
+    this.l=l;
   }
   
 
@@ -25,15 +25,15 @@ class Stella{
    
     
     fill(COLORE_SCIA);
-    triangle(x,y-h/3,x-w*2,y-h*1.2,(x+w/2)-w*2.5,y+h/2);
+    triangle(x,y-l/3,x-r*2,y-l*1.2,(x+r/2)-r*2.5,y+l/2);
     
     fill(COLORE_STELLA);
     
-    triangle(x-w/2,y,x,y-h,x+w/2,y);
-    triangle(x-w/2,y-y/3,x,y+h/3,x+w/2,y-y/3);
+    triangle(x-r/2,y,x,y-l,x+r/2,y);
+    triangle(x-r/2,y-y/3,x,y+l/3,x+r/2,y-y/3);
     
    
-    if (x<640+w*3){     
+    if (x<width+r*3){     
       x++;     
     }
     else{
