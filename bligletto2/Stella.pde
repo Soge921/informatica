@@ -34,7 +34,7 @@ class Stella{
     
    
     if (x<width+r*3){     
-      x++;     
+      x=x+2;     
     }
     else{
           
